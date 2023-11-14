@@ -1,0 +1,47 @@
+:root {
+    /* Color Palette One */
+    --Pink: #F875AA;
+    --Biscuit: #FFDFDF;
+    --White-Accent: #FFF6F6;
+    --Light-Blue: #AEDEFC;
+
+}
+@font-face {
+    font-family: "Signature";
+    src: url("./DarlingtonDemo.ttf") format("truetype");
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+html {
+    height: 100%;
+}
+body {
+    min-height: 100%;
+}
+body::-webkit-scrollbar {
+    display: none;
+}
+.TopNavigation{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: var(--Pink);
+    color: var(--White-Accent);
+    align-items: center;
+}
+.NavName{
+    font-family: Signature;
+    font-size: 30px;
+    font-weight: bold;
+    text-shadow: 1px 1px 20px black;
+}
+.NavLinks{
+    display: flex;
+    gap: 10px;
+}
+.NavLinks a{
+    text-decoration: none;
+    color: var(--White-Accent);
+}

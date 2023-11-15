@@ -67,6 +67,7 @@ body::-webkit-scrollbar {
     width: 100%;
     padding-top: 20vh;
     padding-bottom: 10vh;
+    gap: 10px;
 }
 .Section-1-Greeting {
     width: 100%;
@@ -74,11 +75,17 @@ body::-webkit-scrollbar {
     font-size: 100px;
     -webkit-text-stroke: 2px white;
     text-align: center;
+    text-decoration: 10px underline dashed;
+    text-underline-offset: 10px;
 }
 .Section-1-SubText{
     color: #fff;
     font-size: 50px;
     text-align: center;
+}
+.Section-1-Content{
+    font-size: 30px;
+    color: #fff;
 }
 
 @media only screen and (max-width: 768px) {

@@ -201,9 +201,13 @@ body::-webkit-scrollbar {
 }
 .Content-Text {
     width: 70%;
+    order: 1;
 }
 .Content-Image {
+    display: flex;
     width: 30%;
+    justify-content: center;
+    order: 2;
 }
 .Content-Image img {
     width: 80%;
@@ -246,5 +250,23 @@ body::-webkit-scrollbar {
     }
     .Section-3-Padding {
         padding-top: 55px;
+    }
+    .Section-Content {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .Content-Text {
+        width: 100%;
+        order: 2;
+    }
+    .Content-Image {
+        width: 100%;
+        order: 1;
+    }
+}
+
+@media only screen and (max-width: 768px) and (orientation: landscape) {
+    .Content-Image img {
+        width: 50%; /* Adjust the size of the image in landscape view */
     }
 }

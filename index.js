@@ -40,6 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
             // Smooth scroll to the target section
             const targetId = link.getAttribute("href").substring(1);
             const targetSection = document.getElementById(targetId);
+            console.log(targetSection);
 
             if (targetSection) {
                 const extraOffset = -50; // Adjust this value for the extra offset

@@ -36,6 +36,23 @@ document.addEventListener("DOMContentLoaded", function () {
             });
 
             link.classList.add("active");
+            
+            // Smooth scroll to the target section
+            const targetId = link.getAttribute("href").substring(1);
+            const targetSection = document.getElementById(targetId);
+
+            if (targetSection) {
+                const extraOffset = -50; // Adjust this value for the extra offset
+                const targetPosition =
+                    targetSection.getBoundingClientRect().bottom +
+                    window.scrollY +
+                    extraOffset;
+
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: "smooth",
+                });
+            }
         });
     });
 

@@ -270,7 +270,7 @@ body::-webkit-scrollbar {
     border-radius: 20px;
     margin-bottom: 40px;
     -webkit-box-shadow: 0 10px 10px 5px rgba(0, 0, 0, 0.2);
-    box-shadow: 0 10px 10px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 3px 3px 1px rgba(0, 0, 0, 0.2);
 }
 .Card-Image {
     display: flex;
@@ -304,6 +304,16 @@ body::-webkit-scrollbar {
     font-size: 1.5em;
     font-weight: bold;
     color: rgb(225, 225, 225);
+}
+.Personal-mini-project {
+    padding: 20px;
+}
+.card-img-top {
+    height: 10rem;
+    object-fit: contain;
+}
+.col-shadow {
+    box-shadow: 0 3px 3px 1px rgba(0, 0, 0, 0.2);
 }
 
 
@@ -382,6 +392,9 @@ body::-webkit-scrollbar {
     .Card-Content-Sub-Heading {
         font-size: 1.25em;
     }
+    .Personal-mini-project {
+        padding: 10px 20px;
+    }
 }
 
 @media only screen and (max-width: 768px) and (orientation: landscape) {
@@ -401,7 +414,7 @@ body::-webkit-scrollbar {
     .Card-Content-Heading {
         font-size: 2.5em;
     }
-    .Card-Details{
+    .Card-Details {
         padding: 35px;
     }
 }

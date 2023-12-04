@@ -85,7 +85,6 @@ body::-webkit-scrollbar {
     font-size: 30px;
     font-weight: bold;
     color: var(--Blue);
-    text-shadow: 0px 15px 10px black;
 }
 .NavLinks {
     display: flex;
@@ -315,7 +314,36 @@ body::-webkit-scrollbar {
 .col-shadow {
     box-shadow: 0 3px 3px 1px rgba(0, 0, 0, 0.2);
 }
+.DownToUpTransition {
+    opacity: 0;
+    transform: translateY(100px);
+    transition: opacity 1.5s, transform 1.5s;
+}
 
+.DownToUpTransition.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+.RightToLeftTransition {
+    opacity: 0;
+    transform: translateX(100px);
+    transition: opacity 2s, transform 2s;
+}
+
+.RightToLeftTransition.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+.LeftToRightTransition {
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: opacity 2s, transform 2s;
+}
+
+.LeftToRightTransition.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
 
 @media only screen and (max-width: 768px) {
     .TopNavigation {

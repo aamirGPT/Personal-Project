@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
             });
 
             link.classList.add("active");
-            
+
             // Smooth scroll to the target section
             const targetId = link.getAttribute("href").substring(1);
             const targetSection = document.getElementById(targetId);
@@ -83,4 +83,52 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Observe the Section-1-Landing element
     observer.observe(document.querySelector(".Section-1-Landing"));
+
+    function isElementInViewport(element) {
+        const rect = element.getBoundingClientRect();
+        return (
+            (rect.top <= 0 && rect.bottom >= 0) ||
+            (rect.bottom >=
+                (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.top <=
+                    (window.innerHeight ||
+                        document.documentElement.clientHeight)) ||
+            (rect.top >= 0 &&
+                rect.bottom <=
+                    (window.innerHeight ||
+                        document.documentElement.clientHeight))
+        );
+    }
+    function handleDownToUpTransition() {
+        const cards = document.querySelectorAll(".DownToUpTransition");
+        cards.forEach((card) => {
+            if (isElementInViewport(card)) {
+                card.classList.add("visible");
+            }
+        });
+    }
+
+    document.addEventListener("scroll", handleDownToUpTransition);
+
+    function handleRightToLeftTransition() {
+        const Elements = document.querySelectorAll(".RightToLeftTransition");
+        Elements.forEach((element) => {
+            if (isElementInViewport(element)) {
+                element.classList.add("visible");
+            }
+        });
+    }
+
+    document.addEventListener("scroll", handleRightToLeftTransition);
+
+    function handleLeftToRightTransition() {
+        const Elements = document.querySelectorAll(".LeftToRightTransition");
+        Elements.forEach((element) => {
+            if (isElementInViewport(element)) {
+                element.classList.add("visible");
+            }
+        });
+    }
+
+    document.addEventListener("scroll", handleLeftToRightTransition);
 });

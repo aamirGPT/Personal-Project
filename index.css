@@ -310,6 +310,8 @@ body::-webkit-scrollbar {
 .card-img-top {
     height: 10rem;
     object-fit: contain;
+    padding: 10px;
+    border-bottom: 2px solid rgb(225, 225, 225);
 }
 .col-shadow {
     box-shadow: 0 3px 3px 1px rgba(0, 0, 0, 0.2);
